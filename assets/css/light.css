@@ -1,0 +1,8 @@
+:root {
+  --main-bg-color: #ECF0F3;
+  --shadow-color-1: #d1d9e6;
+  --shadow-color-2: #f9f9f9;
+  --nav-bg-color: #6f00d6;
+  --nav-fg-color: #ffffff;
+  --nav-fg-color-alpha: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,119 @@
+// Clear Default Margin/Padding & Reject User-Select for All Elements
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+// Public Main Style
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#body{
+    display: flex;
+
+    #panel{
+        position: relative;
+        width: 1025px;
+        min-width: 1025px;
+        height: 645px;
+        min-height: 645px;
+        background-color: var(--main-bg-color);
+        box-shadow: 10px 10px 10px var(--shadow-color-1), -10px -10px 10px var(--shadow-color-2);
+        border-radius: 12px;
+        overflow: hidden;
+        margin-left: 270px;
+        transition: margin-left .5s ease-in-out,
+                    border-radius .5s ease-in-out;
+
+        #nav{
+            background-color: var(--nav-bg-color);
+            display: flex;
+            line-height: 60px;
+
+            span#nav-title{
+                color: var(--nav-fg-color);
+                font-size: 1.2rem;
+                margin-left: 20px;
+            }
+
+            div#buttons{
+                display: flex;
+                gap: 70px;
+                margin-left: 6.5vw;
+                .nav-button{
+                    align-self: center;
+                    background-color: transparent;
+                    border: none;
+                    color: var(--nav-fg-color);
+                    font-size: 1.05rem;
+                    border-radius: 20px;
+                    padding: 4px 10px;
+                    height: max-content;
+                    transition: background-color 0.1s ease-in-out;
+                    svg .svg-path{
+                        fill: var(--nav-fg-color);
+                    }
+                    &:hover{
+                        background-color: var(--nav-fg-color-alpha);
+                    }
+                    &.button-this{
+                        background-color: var(--nav-fg-color);
+                        color: var(--nav-bg-color);
+                        & svg path.svg-path{
+                            fill: var(--nav-bg-color);
+                        }
+                    }
+                }
+            }
+
+            button#account-btn{
+                margin-left: 8vw;
+                background-color: transparent;
+                border: none;
+                margin-top: 1.7vh;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                svg path{
+                    fill: var(--nav-fg-color);
+                }
+
+                &:hover{
+                    background-color: var(--nav-fg-color-alpha);
+                }
+            }
+        }
+    }
+
+    #account-page{
+        position: relative;
+        width: 270px;
+        max-width: 270px;
+        height: 200px;
+        max-height: 200px;
+        background-color: var(--main-bg-color);
+        box-shadow: 10px 10px 10px var(--shadow-color-1), 5px -10px 10px var(--shadow-color-2);
+        border-radius: 0px 12px 12px 0px;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        h1{
+            margin-top: 1vh;
+            margin-left: 1vw;
+        }
+    }
+}
