@@ -3,9 +3,13 @@
 
 # 测试样板
 /demos
+/assets/img/LingyunAwA.jpg
 
 # TTF 字体
 /assets/css/fonts/*.ttf
 
 # 仅存放备注
 notebook.html
+
+# YunUI 开发测试样板
+/YunUI/test.html

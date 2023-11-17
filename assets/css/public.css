@@ -43,7 +43,7 @@ div#body #panel #nav span#nav-title {
 div#body #panel #nav div#buttons {
   display: flex;
   gap: 70px;
-  margin-left: 6.5vw;
+  margin-left: 12%;
 }
 div#body #panel #nav div#buttons .nav-button {
   align-self: center;
@@ -70,10 +70,10 @@ div#body #panel #nav div#buttons .nav-button.button-this svg path.svg-path {
   fill: var(--nav-bg-color);
 }
 div#body #panel #nav button#account-btn {
-  margin-left: 8vw;
   background-color: transparent;
   border: none;
-  margin-top: 1.7vh;
+  margin-top: 1.5%;
+  margin-left: 15%;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -91,15 +91,105 @@ div#body #account-page {
   position: relative;
   width: 270px;
   max-width: 270px;
-  height: 200px;
-  max-height: 200px;
-  background-color: var(--main-bg-color);
+  height: 350px;
+  max-height: 350px;
   box-shadow: 10px 10px 10px var(--shadow-color-1), 5px -10px 10px var(--shadow-color-2);
   border-radius: 0px 12px 12px 0px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 div#body #account-page h1 {
-  margin-top: 1vh;
-  margin-left: 1vw;
+  margin-top: 3%;
+  margin-left: 8%;
+}
+div#body #account-page #is-login {
+  margin-top: 8%;
+  width: 270px;
+  display: none;
+}
+div#body #account-page #is-login #user-info {
+  display: flex;
+  justify-content: center;
+}
+div#body #account-page #is-login #user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5%;
+}
+div#body #account-page #is-login #user-info span {
+  margin-left: 8%;
+  font-size: 1.2rem;
+  font-weight: 550;
+  line-height: 60px;
+}
+div#body #account-page #is-login span#user-perm-container {
+  display: flex;
+  margin-top: 25%;
+  justify-content: center;
+}
+div#body #account-page #is-login button {
+  display: block;
+  margin-top: 28%;
+  margin-left: 18%;
+  width: 66%;
+  height: 36px;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--nav-bg-color);
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+div#body #account-page #is-login button:hover {
+  color: var(--main-bg-color);
+  background-color: var(--nav-bg-color);
+}
+div#body #account-page #is-login button:active {
+  background-color: #6f00d6D0;
+}
+div#body #account-page #not-login {
+  margin-top: 8%;
+  width: 270px;
+}
+div#body #account-page #not-login span#hint {
+  display: flex;
+  justify-content: center;
+}
+div#body #account-page #not-login input {
+  margin-top: 8%;
+  margin-left: 18%;
+  width: 66%;
+  height: 28px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--not-login-hint-color);
+}
+div#body #account-page #not-login input::placeholder {
+  padding-left: 2px;
+  color: var(--not-login-hint-color);
+}
+div#body #account-page #not-login input:focus {
+  border-bottom-color: var(--nav-bg-color);
+  color: var(--nav-bg-color);
+  outline: none;
+}
+div#body #account-page #not-login button {
+  display: block;
+  margin-top: 8%;
+  margin-left: 18%;
+  width: 66%;
+  height: 36px;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--nav-bg-color);
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+div#body #account-page #not-login button:hover {
+  color: var(--main-bg-color);
+  background-color: var(--nav-bg-color);
+}
+div#body #account-page #not-login button:active {
+  background-color: #6f00d6D0;
 }

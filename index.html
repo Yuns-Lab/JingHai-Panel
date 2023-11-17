@@ -39,11 +39,28 @@
         <div id="account-page">
             <h1>账号</h1>
             <div id="is-login">
+                <div id="container">
+                    <div id="user-info">
+                        <img src="/assets/img/LingyunAwA.jpg" alt="用户头像" id="user-avator">
+                        <span id="user-name">LingyunAwA</span>
+                    </div>
+                    <span id="user-perm-container">用户等级：<span id="user-perm">I 待审核</span></span>
+                    
+                    <button id="logout">注销</button>
+                </div>
             </div>
-            <div id="login">
+            <div id="not-login">
+                <div id="container">
+                    <span id="hint">请先登录 / 注册</span>
+                    <input placeholder="用户名" type="text" id="input-username" style="margin-top: 12%;">
+                    <input placeholder="密码" type="password" id="input-password">
+                    <button id="login" type="submit" onclick="tryLogin()" style="margin-top: 4vh;">登录</button>
+                    <button id="register" type="submit">注册</button>
+                </div>
             </div>
         </div>
     </div>
 </body>
+<script src="/assets/js/public.js"></script>
 <script src="/assets/js/account.js"></script>
 </html>
