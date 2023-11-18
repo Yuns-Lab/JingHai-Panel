@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/public.css">
+    <link rel="stylesheet" href="/GmAlert/gmalert.min.css">
     <link rel="stylesheet" id="time-css" href="/assets/css/light.css">
     <title>欢迎使用京海公会面板</title>
 </head>
@@ -46,7 +47,7 @@
                     </div>
                     <span id="user-perm-container">用户等级：<span id="user-perm">I 待审核</span></span>
                     
-                    <button id="logout">注销</button>
+                    <button id="logout" onclick="tryLogout()">注销</button>
                 </div>
             </div>
             <div id="not-login">
@@ -54,13 +55,14 @@
                     <span id="hint">请先登录 / 注册</span>
                     <input placeholder="用户名" type="text" id="input-username" style="margin-top: 12%;">
                     <input placeholder="密码" type="password" id="input-password">
-                    <button id="login" type="submit" onclick="tryLogin()" style="margin-top: 4vh;">登录</button>
-                    <button id="register" type="submit">注册</button>
+                    <button id="login" onclick="tryLogin()" style="margin-top: 4vh;">登录</button>
+                    <button id="register" onclick="tryRegister()">注册</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="/GmAlert/gmalert.min.js"></script>
 <script src="/assets/js/public.js"></script>
 <script src="/assets/js/account.js"></script>
 </html>
