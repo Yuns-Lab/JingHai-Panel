@@ -20,4 +20,4 @@
 
   <p>
 - [`assets/js`](blob/main/assets/js)：网页脚本文件
-- [`GmAlert/`](blob/main/GmAlert/)：依赖：GmAlert 弹窗组件 v1.2.0 | From https://githubfast.com/g-mero/GmAlert
+- [`GmAlert/`](blob/main/GmAlert/)：依赖：GmAlert 弹窗组件 v1.2.0 | From https://github.com/g-mero/GmAlert
