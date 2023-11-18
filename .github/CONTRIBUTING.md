@@ -6,7 +6,7 @@
 
 #### Part 1: 如何向我们反馈问题
 
-1. 打开我们仓库的 [Bug 反馈页面](https://github.com/Yuns-Lab/JHPanel/issues/new?assignees=&labels=%C2%B7+Bug%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=1bug.yml)
+1. 打开我们仓库的 [Bug 反馈页面](https://github.com/Yuns-Lab/JingHai-Panel/issues/new?assignees=&labels=%C2%B7+Bug%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=1bug.yml)
 2. 填写反馈标题
 3. 认真确认检查项中的内容
 4. 填写描述、重现步骤（如果有），并上传包含 Bug 的截图
@@ -15,7 +15,7 @@
 7. 等待我们处理
 
 #### Part 2: 如何向我们提出优化/新功能建议
-1. 打开我们仓库的 [优化反馈界面](https://github.com/Yuns-Lab/JHPanel/issues/new?assignees=&labels=%C2%B7+%E4%BC%98%E5%8C%96%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=2addon.yml) 或 [新功能反馈页面](https://github.com/Yuns-Lab/JHPanel/issues/new?assignees=&labels=%C2%B7+%E6%96%B0%E5%8A%9F%E8%83%BD%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=3feature.yml)
+1. 打开我们仓库的 [优化反馈界面](https://github.com/Yuns-Lab/JingHai-Panel/issues/new?assignees=&labels=%C2%B7+%E4%BC%98%E5%8C%96%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=2addon.yml) 或 [新功能反馈页面](https://github.com/Yuns-Lab/JingHai-Panel/issues/new?assignees=&labels=%C2%B7+%E6%96%B0%E5%8A%9F%E8%83%BD%2C%E6%96%B0%E5%8F%8D%E9%A6%88&projects=&template=3feature.yml)
 2. 填写反馈标题
 3. 认真确认检查项中的内容
 4. 填写描述和原因
@@ -57,7 +57,7 @@
 1. 来到仓库页面，点击右上角的 Fork 按钮
 2. 创建一个仓库副本在你的账户上
 3. 提交你想更改的代码到你的副本仓库
-4. 来到我们的 [Pull Request 页面](https://github.com/Yuns-Lab/JHPanel/pulls)，点击 New pull requests
+4. 来到我们的 [Pull Request 页面](https://github.com/Yuns-Lab/JingHai-Panel/pulls)，点击 New pull requests
 5. 选择从你的副本仓库合并到我们的主仓库
 6. 填写 Pull Request 标题和描述
 7. ~~签署 CLA~~（此项暂无，我们还未设置仓库的 CLA）
