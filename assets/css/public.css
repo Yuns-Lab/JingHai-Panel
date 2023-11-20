@@ -18,6 +18,11 @@ div#body {
   display: flex;
 }
 div#body #panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "nav" "main";
   position: relative;
   width: 1025px;
   min-width: 1025px;
@@ -33,12 +38,13 @@ div#body #panel {
 div#body #panel #nav {
   background-color: var(--nav-bg-color);
   display: flex;
-  line-height: 60px;
+  grid-area: nav;
 }
 div#body #panel #nav span#nav-title {
   color: var(--nav-fg-color);
   font-size: 1.2rem;
   margin-left: 20px;
+  line-height: 60px;
 }
 div#body #panel #nav div#buttons {
   display: flex;
@@ -54,7 +60,7 @@ div#body #panel #nav div#buttons .nav-button {
   border-radius: 20px;
   padding: 4px 10px;
   height: max-content;
-  transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 div#body #panel #nav div#buttons .nav-button svg .svg-path {
   fill: var(--nav-fg-color);
@@ -62,11 +68,11 @@ div#body #panel #nav div#buttons .nav-button svg .svg-path {
 div#body #panel #nav div#buttons .nav-button:hover {
   background-color: var(--nav-fg-color-alpha);
 }
-div#body #panel #nav div#buttons .nav-button.button-this {
+div#body #panel #nav div#buttons .nav-button.nav-button-this {
   background-color: var(--nav-fg-color);
   color: var(--nav-bg-color);
 }
-div#body #panel #nav div#buttons .nav-button.button-this svg path.svg-path {
+div#body #panel #nav div#buttons .nav-button.nav-button-this svg path.svg-path {
   fill: var(--nav-bg-color);
 }
 div#body #panel #nav button#account-btn {
@@ -192,4 +198,30 @@ div#body #account-page #not-login button:hover {
 }
 div#body #account-page #not-login button:active {
   background-color: #6f00d6D0;
+}
+div#body #page-container {
+  grid-area: main;
+}
+div#body #page-container .page {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+div#body #page-container .page:nth-child(1) h1#title {
+  font-size: 2.5rem;
+  margin: 20px 40px;
+}
+div#body #page-container .page:nth-child(1) h2#you-can-do {
+  font-size: 2rem;
+  margin: 20% 40px;
+}
+div#body #page-container .page:nth-child(1) h2#you-can-do hr {
+  margin: 10px 0;
+}
+div#body #page-container .page:nth-child(1) h2#you-can-do span {
+  display: block;
+  font-size: 1.5rem;
+}
+div#body #page-container .page:nth-child(1) h2#you-can-do span#line2 {
+  margin-top: 5px;
 }
