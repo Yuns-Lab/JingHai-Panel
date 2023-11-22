@@ -220,8 +220,37 @@ div#body #page-container .page:nth-child(1) h2#you-can-do hr {
 }
 div#body #page-container .page:nth-child(1) h2#you-can-do span {
   display: block;
+}
+div#body #page-container .page:nth-child(1) h2#you-can-do span#line1 {
   font-size: 1.5rem;
 }
 div#body #page-container .page:nth-child(1) h2#you-can-do span#line2 {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+div#body #page-container .page:nth-child(2) h1#title {
+  font-size: 2.5rem;
+  margin: 20px 40px;
+}
+div#body #page-container .page:nth-child(2) h2#subtitle {
+  font-size: 1rem;
+  margin: -15px 40px;
+}
+div#body #page-container .page:nth-child(2) h2#you-can-do {
+  display: none;
+  font-size: 2rem;
+  margin: 20% 40px;
+}
+div#body #page-container .page:nth-child(2) h2#you-can-do hr {
+  margin: 10px 0;
+}
+div#body #page-container .page:nth-child(2) h2#you-can-do span {
+  display: block;
+}
+div#body #page-container .page:nth-child(2) h2#you-can-do span#line1 {
+  font-size: 1.5rem;
+}
+div#body #page-container .page:nth-child(2) h2#you-can-do span#line2 {
+  font-size: 1.5rem;
   margin-top: 5px;
 }

@@ -22,6 +22,49 @@ function removePageThis(element){
 setPageThis(document.querySelector(`.page:nth-child(1)`))
 
 // Unit: 分页面
+// 公共函数
+function public_getElementContent(){
+    const permission = localStorage.getItem('permission');
+    if (permission == null){ // 未登录
+        var text1 = '你现在啥也干不了...';
+        var text2 = '或许登录能解锁更多内容?';
+        var text3 = '请先登录';
+        var text4 = '登陆后即可操作';
+        var is23  = false;
+    } else if (permission == "1"){ // 新人
+        var text1 = '填写入会预审表单';
+        var text2 = '<span style="font-size:15px">你只能干这件事 ...</span>';
+        var text3 = '你还不是京海公会成员，请提交入会预审表单';
+        var text4 = '如已提交入会预审表单请通知对应审核员';
+        var is23  = false;
+    } else if (permission == "2"){ // 成员
+        var text1 = '查看成员列表 / 查看工单列表 / 提交工单';
+        var text2 = '';
+        var text3 = '你已经是京海工会成员，无需再次提交入会预审表单';
+        var text4 = '';
+        var is23  = true;
+    } else if (permission == "3"){ // 精英
+        var text1 = '查看成员列表 / 查看工单列表 / 提交工单';
+        var text2 = '';
+        var text3 = '你已经是京海工会成员，无需再次提交入会预审表单';
+        var text4 = '';
+        var is23  = true;
+    } else if (permission == "4"){ // 副会长
+        var text1 = '查看入会预审列表 / 批准/拒绝入会预审 / 查看成员列表';
+        var text2 = '修改成员权限等级 / 查看工单 / 提交工单 / 批准 or 拒绝工单';
+        var text3 = '你已经是京海工会成员，无需再次提交入会预审表单';
+        var text4 = '同时，你可以查看其他玩家提交的表单';
+        var is23  = false;
+    } else if (permission == "5"){ // 会长
+        var text1 = '查看入会预审列表 / 批准/拒绝入会预审 / 查看成员列表 / 修改成员权限等级';
+        var text2 = '查看工单 / 提交工单 / 批准/拒绝工单 / 以及其他没想到的全部可用项目';
+        var text3 = '你已经是京海工会成员，无需再次提交入会预审表单';
+        var text4 = '同时，你可以查看其他玩家提交的表单';
+        var is23  = false;
+    }
+    return [text1, text2, text3, text4, is23];
+}
+
 // 主页
 function getHourNow(){
     const now = new Date();
@@ -56,39 +99,29 @@ function getTimeText(){
     return TimeText;
 }
 
-function editYouCanDoText(element1, element2){
-    permission = localStorage.getItem("premission");
-    if (permission == null){ // 未登录
-        element1.innerHTML = '你现在啥也干不了...'
-        element2.innerHTML = '或许登录能解锁更多内容?'
-    }
-    if (permission == "1"){ // 新人
-        element1.innerHTML = '填写入会预审表单';
-        element2.innerHTML = '<span style="font-size:15px">你只能干这件事 ...</span>';
-    } else if (permission == "2"){ // 成员
-        element1.innerHTML = '查看入会预审列表 / 查看成员列表 / 查看工单 / 提交工单';
-        element2.innerHTML = ''
-    } else if (permission == "3"){ // 精英
-        element1.innerHTML = '查看入会预审列表 / 查看成员列表 / 查看工单 / 提交工单';
-        element2.innerHTML = ''
-    } else if (permission == "4"){ // UNIT 副会长
-        element1.innerHTML = '查看入会预审列表 / 批准/拒绝入会预审 / 查看成员列表'
-        element2.innerHTML = '修改成员权限等级 / 查看工单 / 提交工单 / 批准 or 拒绝工单';
-    } else if (permission == "5"){ // UNIT会长
-        element1.innerHTML = '查看入会预审列表 / 批准/拒绝入会预审 / 查看成员列表 / 修改成员权限等级'
-        element2.innerHTML = '查看工单 / 提交工单 / 批准/拒绝工单 / 以及其他没想到的全部可用项目'
-    }
-}
-
-function elementsText(){
+function editElementsTextPage1(){
     document.querySelector('#page-container .page:nth-child(1) h1#title').innerHTML = getTimeText()
-    editYouCanDoText(
-        document.querySelector('#page-container .page:nth-child(1) h2#you-can-do span#line1'),
-        document.querySelector('#page-container .page:nth-child(1) h2#you-can-do span#line2')
-    )
+    const [text1, text2, _3, _4] = public_getElementContent()
+    document.querySelector('#page-container .page:nth-child(1) h2#you-can-do span#line1').innerHTML = text1;
+    document.querySelector('#page-container .page:nth-child(1) h2#you-can-do span#line2').innerHTML = text2;
 }
 
-elementsText()
+editElementsTextPage1()
 setInterval(() => {
-    elementsText()
+    editElementsTextPage1()
+}, 100);
+
+// 预审核
+function editElementsTextPage2(){
+    const [text1, text2, text3, text4, is23] = public_getElementContent()
+    document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line1').innerHTML = text1;
+    document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line2').innerHTML = text2;
+    if (is23){ document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "block"; }
+    document.querySelector('#page-container .page:nth-child(2) h1#title').innerHTML = text3;
+    document.querySelector('#page-container .page:nth-child(2) h2#subtitle').innerHTML = text4;
+}
+
+editElementsTextPage2()
+setInterval(() => {
+    editElementsTextPage2()
 }, 100);

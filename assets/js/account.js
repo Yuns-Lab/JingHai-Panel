@@ -31,18 +31,18 @@ function tryLogin(){
             const [status, response] = responseText
             if (status == 400) { GmAlert.notice('用户不存在，请先注册或检查填写的内容', 'warning'); return; }
             if (status == 401) { GmAlert.notice('用户名或密码错误', 'error'); return; }
-            const [premission, avatar, cookie] = JSON.parse(response)
+            const [permission, avatar, cookie] = JSON.parse(response)
             // Cookie 处理
             const date = new Date()
             date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
             document.cookie = `login=${cookie}; expires=${date.toGMTString()}`
             // 权限处理
-            localStorage.setItem('premission', premission)
+            localStorage.setItem('permission', permission)
             // 头像 & 名字 & 用户等级 - 显示处理
             if (avatar != null){ document.querySelector('img#user-avator').setAttribute('src', avatar) }
             localStorage.setItem('username', username)
             document.querySelector('span#user-name').innerHTML = username
-            document.querySelector('span#user-perm').innerHTML = prem_text[premission]
+            document.querySelector('span#user-perm').innerHTML = perm_text[permission]
             // 子页面交换
             document.querySelector('div#not-login').style.display = 'none'
             document.querySelector('div#is-login').style.display = 'block'
@@ -74,14 +74,14 @@ function tryCookieLogin(){
         .then(function(responseText){
             const [status, response] = responseText
             if (status == 401) { GmAlert.notice('尝试自动登录失败，请手动登录', 'warning'); return; }
-            const [username, premission, avatar] = JSON.parse(response)
+            const [username, permission, avatar] = JSON.parse(response)
             // 权限处理
-            localStorage.setItem('premission', premission)
+            localStorage.setItem('permission', permission)
             // 头像 & 名字 & 用户等级 - 显示处理
             if (avatar != null){ document.querySelector('img#user-avator').setAttribute('src', avatar) }
             localStorage.setItem('username', username)
             document.querySelector('span#user-name').innerHTML = username
-            document.querySelector('span#user-perm').innerHTML = prem_text[premission]
+            document.querySelector('span#user-perm').innerHTML = perm_text[permission]
             // 子页面交换
             document.querySelector('div#not-login').style.display = 'none'
             document.querySelector('div#is-login').style.display = 'block'
@@ -131,7 +131,7 @@ function tryLogout(){
             if (status == 409){ GmAlert.notice('注销失败：用户已注销', 'warning'); return;}
             document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             localStorage.removeItem('username')
-            localStorage.removeItem('premission')
+            localStorage.removeItem('permission')
             // 子页面交换
             document.querySelector('div#not-login').style.display = 'block'
             document.querySelector('div#is-login').style.display = 'none'
@@ -141,6 +141,6 @@ function tryLogout(){
 
 // Onload 初始化
 localStorage.setItem('accountPageVisibility', 'false');
-localStorage.removeItem('username'); localStorage.removeItem('premission')
+localStorage.removeItem('username'); localStorage.removeItem('permission')
 GmAlert.notice.config({ timeout: '3000' })
-var prem_text = {'1':'I 访客','2':'II 成员','3':'III 精英','4':'IV 副会长','5':'V 会长'}
+var perm_text = {'1':'I 访客','2':'II 成员','3':'III 精英','4':'IV 副会长','5':'V 会长'}
