@@ -116,7 +116,8 @@ function editElementsTextPage2(){
     const [text1, text2, text3, text4, is23] = public_getElementContent()
     document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line1').innerHTML = text1;
     document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line2').innerHTML = text2;
-    if (is23){ document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "block"; }
+    document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "none";
+    if (is23 || localStorage.getItem('permission') == null){ document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "block"; }
     document.querySelector('#page-container .page:nth-child(2) h1#title').innerHTML = text3;
     document.querySelector('#page-container .page:nth-child(2) h2#subtitle').innerHTML = text4;
 }
