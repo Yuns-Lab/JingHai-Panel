@@ -241,11 +241,11 @@ div#body{
             &:nth-child(2){
                 h1#title{
                     font-size: 2.5rem;
-                    margin: 20px 40px;
+                    margin: 20px 40px 0 40px;
                 }
                 h2#subtitle{
                     font-size: 1rem;
-                    margin: -15px 40px;
+                    margin: 5px 40px;
                 }
                 h2#you-can-do{
                     font-size: 2rem;
@@ -261,6 +261,51 @@ div#body{
                         &#line2{
                             font-size: 1.5rem;
                             margin-top: 5px;
+                        }
+                    }
+                }
+                div#chooses-container{
+                    margin: 100px 40px 0 40px;
+                    display: grid;
+                    grid-template-columns: calc(calc(100% - 20px) / 3) calc(calc(100% - 20px) / 3) calc(calc(100% - 20px) / 3);
+                    grid-template-rows: 340px;
+                    gap: 0px 10px;
+                    grid-auto-flow: row;
+                    grid-template-areas:
+                        "r b s";
+                    div.card{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 10px;
+                        padding: 5px;
+                        transition: width .2s ease-in-out;
+                        &[type="r"]{
+                            grid-area: r;
+                            background-color: #cee7d4;
+                            img{
+                                width: 270px;
+                                height: 270px;
+                            }
+                            &:hover ~ div#chooses-container{
+                                grid-template-columns: 350px calc(calc(100% - 20px - 350px) / 2) calc(calc(100% - 20px - 350px) / 2)
+                            }
+                        }
+                        &[type="b"]{
+                            grid-area: b;
+                            background-color: #d8e2ec;
+                            img{
+                                width: 214px;
+                                height: 214px;
+                            }
+                        }
+                        &[type="s"]{
+                            grid-area: s;
+                            background-color: #e1e2ce;
+                            img{
+                                width: 188px;
+                                height: 188px;
+                            }
                         }
                     }
                 }

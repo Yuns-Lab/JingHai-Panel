@@ -35,7 +35,7 @@ function public_getElementContent(){
         var text1 = '填写入会预审表单';
         var text2 = '<span style="font-size:15px">你只能干这件事 ...</span>';
         var text3 = '你还不是京海公会成员，请提交入会预审表单';
-        var text4 = '如已提交入会预审表单请通知对应审核员';
+        var text4 = '请在下方选择审核方向，如已提交入会预审表单请通知对应审核员';
         var is23  = false;
     } else if (permission == "2"){ // 成员
         var text1 = '查看成员列表 / 查看工单列表 / 提交工单';
@@ -116,8 +116,10 @@ function editElementsTextPage2(){
     const [text1, text2, text3, text4, is23] = public_getElementContent()
     document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line1').innerHTML = text1;
     document.querySelector('#page-container .page:nth-child(2) h2#you-can-do span#line2').innerHTML = text2;
+    document.querySelectorAll('#page-container .page:nth-child(2) div.card').forEach(element => { element.style.display = "none"; })
     document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "none";
-    if (is23 || localStorage.getItem('permission') == null){ document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "block"; }
+    if (localStorage.getItem('permission') == 1){ document.querySelectorAll('#page-container .page:nth-child(2) div.card').forEach(element => { element.style.display = "flex"; }) }
+    if (is23){ document.querySelector('#page-container .page:nth-child(2) h2#you-can-do').style.display = "block"; }
     document.querySelector('#page-container .page:nth-child(2) h1#title').innerHTML = text3;
     document.querySelector('#page-container .page:nth-child(2) h2#subtitle').innerHTML = text4;
 }
