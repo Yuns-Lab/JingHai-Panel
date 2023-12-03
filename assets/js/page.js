@@ -109,7 +109,7 @@ function editElementsTextPage1(){
 editElementsTextPage1()
 setInterval(() => {
     editElementsTextPage1()
-}, 100);
+}, 250);
 
 // 预审核
 function editElementsTextPage2(){
@@ -127,4 +127,4 @@ function editElementsTextPage2(){
 editElementsTextPage2()
 setInterval(() => {
     editElementsTextPage2()
-}, 100);
+}, 250);

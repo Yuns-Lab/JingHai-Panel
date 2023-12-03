@@ -287,9 +287,12 @@ div#body{
                                 width: 270px;
                                 height: 270px;
                             }
-                            &:hover ~ div#chooses-container{
-                                grid-template-columns: 350px calc(calc(100% - 20px - 350px) / 2) calc(calc(100% - 20px - 350px) / 2)
-                            }
+                            --font-color: #FF0000;
+                            --font-color-dark: #410500;
+                            --margin-left: 7px;
+                            --border-color: #a8e7b7;
+                            --btn-color-normal: #98e9ab;
+                            --btn-color-hover: #8ada9c;
                         }
                         &[type="b"]{
                             grid-area: b;
@@ -298,6 +301,12 @@ div#body{
                                 width: 214px;
                                 height: 214px;
                             }
+                            --font-color: #866526;
+                            --font-color-dark: #281E0B;
+                            --margin-left: 7px;
+                            --border-color: #b3d0ec;
+                            --btn-color-normal: #9bc3e9;
+                            --btn-color-hover: #93badf;
                         }
                         &[type="s"]{
                             grid-area: s;
@@ -305,6 +314,71 @@ div#body{
                             img{
                                 width: 188px;
                                 height: 188px;
+                            }
+                            --font-color: #0E3F36;
+                            --font-color-dark: #082520;
+                            --margin-left: 5.5px;
+                            --border-color: #dee0ac;
+                            --btn-color-normal: #e1e499;
+                            --btn-color-hover: #dee098;
+                        }
+                        div.content{
+                            position: absolute;
+                            width: 308.33px;
+                            height: 340px;
+                            opacity: 0;
+                            border: 5px solid #ffffff00;
+                            border-radius: 10px;
+                            z-index: 3;
+                            transition: background-color .3s ease-in-out,
+                                        backdrop-filter  .3s ease-in-out,
+                                        border           .3s ease-in-out,
+                                        opacity          .5s ease-in,
+                                        opacity          .2s ease-out;
+                            @keyframes myBorderAnimation {
+                                from{
+                                    border: 1px solid;
+                                    border-color: var(--border-color);
+                                }
+                                to{
+                                    border: 5px solid;
+                                    border-color: var(--border-color);
+                                }
+                            }
+                            &:hover{
+                                opacity: 1;
+                                backdrop-filter: blur(10px);
+                                background-color: #ffffff70;
+                                border-color: var(--border-color);
+                                animation: myBorderAnimation .3s;
+                            }
+                            h1{
+                                display: flex;
+                                justify-content: center;
+                                font-size: 2.5em;
+                                color: var(--font-color);
+                                margin-top: 10px;
+                            }
+                            span{
+                                display: flex;
+                                justify-content: center;
+                                font-size: 1.3em;
+                                color: var(--font-color-dark);
+                                margin-top: 10px;
+                                margin-left: var(--margin-left);
+                            }
+                            button{
+                                border: none;
+                                border-radius: 5px;
+                                background-color: var(--btn-color-normal);
+                                width: 270px;
+                                height: 50px;
+                                font-size: 1.2rem;
+                                margin-top: 40px;
+                                margin-left: 18px;
+                                &:hover{
+                                    background-color: var(--btn-color-hover);
+                                }
                             }
                         }
                     }

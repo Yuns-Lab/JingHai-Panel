@@ -1,105 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/public.css">
-    <link rel="stylesheet" href="/GmAlert/gmalert.min.css">
-    <link rel="stylesheet" id="time-css" href="/assets/css/light.css">
-    <title>欢迎使用京海公会面板</title>
-</head>
-<body>
-    <div id="body">
-        <div id="panel">
-            <div id="nav">
-                <span id="nav-title">欢迎使用京海面板</span>
-                <div id="buttons">
-                    <button class="nav-button nav-button-this" onclick="changePage(1)">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 19 19" fill="none" style="position: relative; top: 2.7px;"><g opacity="1"  transform="translate(0 0) rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M18.39,8.21043c0.74,0.78 0.65,1.45 0.52,1.72c-0.09,0.19997 -0.38,0.74997 -1.23,0.74997h-1.06v5.76c0,1.31 -0.94,2.54 -2.27,2.54h-3.07v-6.1c0,-0.65 0.1,-1.02 -0.57,-1.02h-2.42c-0.67,0 -0.57,0.37 -0.57,1.02v6.1h-3.07c-1.33,0 -2.27,-1.23 -2.27,-2.54v-5.76h-1.06c-0.85,0 -1.15,-0.55 -1.24,-0.74997c-0.12,-0.27 -0.21,-0.94 0.53,-1.72l7.2,-7.49c0.45,-0.46 1.05,-0.72 1.69,-0.72c0.64,0 1.24,0.26 1.69,0.72zM17.73,9.41043c-0.04,-0.07 -0.11,-0.26 -0.22,-0.38l-7.21,-7.48c-0.21,-0.23 -0.5,-0.36 -0.79,-0.36c-0.3,0 -0.6,0.13 -0.81,0.36l-7.21,7.48c-0.12,0.13 -0.19,0.31 -0.23,0.38c0.02,0 0.03,0.08 0.06,0.08h2.24v6.94997c0,0.66 0.42,1.36 1.09,1.36h1.88v-4.92c0,-1.31 0.42,-2.2 1.76,-2.2h2.42c1.33,0 1.75,0.89 1.75,2.2v4.91h1.88c0.67,0 1.09,-0.7 1.09,-1.35v-6.94997h2.25c0.02,0 0.04,-0.08 0.05,-0.08z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19"/></defs></svg>
-                        主页
-                    </button>
-                    <button class="nav-button" onclick="changePage(2)">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16.5 16.5" fill="none" style="position: relative; top: 2px;"><path fill-rule="evenodd" class="svg-path" opacity="1" d="M5.05,8.91c1.47,0 2.67,1.2 2.67,2.67c0,1.47 -1.2,2.67 -2.67,2.67c-1.48,0 -2.67,-1.2 -2.67,-2.67c0,-1.47 1.19,-2.67 2.67,-2.67zM6.53,11.58c0,-0.82 -0.66,-1.49 -1.48,-1.49c-0.82,0 -1.49,0.67 -1.49,1.49c0,0.82 0.67,1.48 1.49,1.48c0.82,0 1.48,-0.66 1.48,-1.48zM13.66,3.56c0.32,0 0.59,0.27 0.59,0.6c0,0.32 -0.27,0.59 -0.59,0.59h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.59c0,-0.33 0.27,-0.6 0.59,-0.6zM13.66,9.5c0.32,0 0.59,0.27 0.59,0.59c0,0.33 -0.27,0.6 -0.59,0.6h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.6c0,-0.32 0.27,-0.59 0.59,-0.59zM13.66,5.94c0.32,0 0.59,0.26 0.59,0.59c0,0.33 -0.27,0.6 -0.59,0.6h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.6c0,-0.33 0.27,-0.59 0.59,-0.59zM13.66,12.02c0.32,0 0.59,0.27 0.59,0.6c0,0.32 -0.27,0.59 -0.59,0.59h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.59c0,-0.33 0.27,-0.6 0.59,-0.6zM6.98,3.19c0.21,-0.24 0.57,-0.27 0.82,-0.07c0.25,0.2 0.29,0.56 0.1,0.82l-2.25,2.76c-0.22,0.27 -0.56,0.43 -0.92,0.43c-0.34,0 -0.66,-0.14 -0.89,-0.4l-1.32,-1.49c-0.21,-0.24 -0.18,-0.62 0.06,-0.83c0.24,-0.22 0.62,-0.2 0.83,0.04l1.32,1.5zM15.44,0c0.65,0 1.19,0.53 1.19,1.19v14.25c0,0.65 -0.54,1.19 -1.19,1.19h-14.25c-0.66,0 -1.19,-0.54 -1.19,-1.19v-14.25c0,-0.66 0.53,-1.19 1.19,-1.19zM15.44,15.44v-14.25h-14.25v14.25z"></path></svg>
-                        预审核
-                    </button>
-                    <button class="nav-button" onclick="changePage(3)">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 20 19.5" fill="none" style="position: relative; top: 2px;"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M13.0612,7.71375c0.33,0 0.6001,0.27 0.6001,0.6c0,0.33 -0.2701,0.59 -0.6001,0.59h-7.11995c-0.33,0 -0.6,-0.26 -0.6,-0.59c0,-0.33 0.27,-0.6 0.6,-0.6zM13.0612,11.2837c0.33,0 0.6001,0.26 0.6001,0.59c0,0.33 -0.2701,0.59 -0.6001,0.59h-7.11995c-0.33,0 -0.6,-0.26 -0.6,-0.59c0,-0.33 0.27,-0.59 0.6,-0.59zM15.4412,0.59375c0.98,0 1.78,0.8 1.78,1.78v14.25005c0,0.98 -0.8,1.7799 -1.78,1.7799h-11.87995c-0.98,0 -1.78,-0.7999 -1.78,-1.7799v-14.25005c0,-0.98 0.8,-1.78 1.78,-1.78zM5.94125,3.56375h7.11995v-1.78h-7.11995zM16.0312,2.37375c0,-0.33 -0.27,-0.59 -0.59,-0.59h-1.1899v1.78c0,0.65 -0.5301,1.19 -1.1901,1.19h-7.11995c-0.66,0 -1.19,-0.54 -1.19,-1.19v-1.78h-1.19c-0.33,0 -0.59,0.26 -0.59,0.59v14.25005c0,0.33 0.26,0.5999 0.59,0.5999h11.87995c0.32,0 0.59,-0.2699 0.59,-0.5999z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
-                        工单
-                    </button>
-                    <button class="nav-button" onclick="changePage(4)">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19" fill="none" style="position: relative; top: 3.2px;"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M9.40076,2.36224c1.71004,0 3.13004,1.42 3.13004,3.13c0,1.71 -1.42,3.14 -3.13004,3.14c-1.71,0 -3.13,-1.43 -3.13,-3.14c0,-1.71 1.42,-3.13 3.13,-3.13zM15.0008,15.5122c-3.51,1.38 -7.17004,1.47 -11.11004,0c-0.05,-3.23 1.52,-5.22 3.51,-5.97996l2.05,3.36996l2.13004,-3.27996c1.9,0.80996 3.42,2.75996 3.42,5.88996z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
-                        成员
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/public.css">
+        <link rel="stylesheet" href="gmAlert/gmalert.min.css">
+        <link rel="stylesheet" id="time-css" href="assets/css/light.css">
+        <title>欢迎使用京海公会面板</title>
+    </head>
+    <body>
+        <div id="body">
+            <div id="panel">
+                <div id="nav">
+                    <span id="nav-title">欢迎使用京海面板</span>
+                    <div id="buttons">
+                        <button class="nav-button nav-button-this" onclick="changePage(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 19 19" fill="none" style="position: relative; top: 2.7px;"><g opacity="1"  transform="translate(0 0) rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M18.39,8.21043c0.74,0.78 0.65,1.45 0.52,1.72c-0.09,0.19997 -0.38,0.74997 -1.23,0.74997h-1.06v5.76c0,1.31 -0.94,2.54 -2.27,2.54h-3.07v-6.1c0,-0.65 0.1,-1.02 -0.57,-1.02h-2.42c-0.67,0 -0.57,0.37 -0.57,1.02v6.1h-3.07c-1.33,0 -2.27,-1.23 -2.27,-2.54v-5.76h-1.06c-0.85,0 -1.15,-0.55 -1.24,-0.74997c-0.12,-0.27 -0.21,-0.94 0.53,-1.72l7.2,-7.49c0.45,-0.46 1.05,-0.72 1.69,-0.72c0.64,0 1.24,0.26 1.69,0.72zM17.73,9.41043c-0.04,-0.07 -0.11,-0.26 -0.22,-0.38l-7.21,-7.48c-0.21,-0.23 -0.5,-0.36 -0.79,-0.36c-0.3,0 -0.6,0.13 -0.81,0.36l-7.21,7.48c-0.12,0.13 -0.19,0.31 -0.23,0.38c0.02,0 0.03,0.08 0.06,0.08h2.24v6.94997c0,0.66 0.42,1.36 1.09,1.36h1.88v-4.92c0,-1.31 0.42,-2.2 1.76,-2.2h2.42c1.33,0 1.75,0.89 1.75,2.2v4.91h1.88c0.67,0 1.09,-0.7 1.09,-1.35v-6.94997h2.25c0.02,0 0.04,-0.08 0.05,-0.08z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19"/></defs></svg>
+                            主页
+                        </button>
+                        <button class="nav-button" onclick="changePage(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16.5 16.5" fill="none" style="position: relative; top: 2px;"><path fill-rule="evenodd" class="svg-path" opacity="1" d="M5.05,8.91c1.47,0 2.67,1.2 2.67,2.67c0,1.47 -1.2,2.67 -2.67,2.67c-1.48,0 -2.67,-1.2 -2.67,-2.67c0,-1.47 1.19,-2.67 2.67,-2.67zM6.53,11.58c0,-0.82 -0.66,-1.49 -1.48,-1.49c-0.82,0 -1.49,0.67 -1.49,1.49c0,0.82 0.67,1.48 1.49,1.48c0.82,0 1.48,-0.66 1.48,-1.48zM13.66,3.56c0.32,0 0.59,0.27 0.59,0.6c0,0.32 -0.27,0.59 -0.59,0.59h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.59c0,-0.33 0.27,-0.6 0.59,-0.6zM13.66,9.5c0.32,0 0.59,0.27 0.59,0.59c0,0.33 -0.27,0.6 -0.59,0.6h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.6c0,-0.32 0.27,-0.59 0.59,-0.59zM13.66,5.94c0.32,0 0.59,0.26 0.59,0.59c0,0.33 -0.27,0.6 -0.59,0.6h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.6c0,-0.33 0.27,-0.59 0.59,-0.59zM13.66,12.02c0.32,0 0.59,0.27 0.59,0.6c0,0.32 -0.27,0.59 -0.59,0.59h-3.93c-0.32,0 -0.59,-0.27 -0.59,-0.59c0,-0.33 0.27,-0.6 0.59,-0.6zM6.98,3.19c0.21,-0.24 0.57,-0.27 0.82,-0.07c0.25,0.2 0.29,0.56 0.1,0.82l-2.25,2.76c-0.22,0.27 -0.56,0.43 -0.92,0.43c-0.34,0 -0.66,-0.14 -0.89,-0.4l-1.32,-1.49c-0.21,-0.24 -0.18,-0.62 0.06,-0.83c0.24,-0.22 0.62,-0.2 0.83,0.04l1.32,1.5zM15.44,0c0.65,0 1.19,0.53 1.19,1.19v14.25c0,0.65 -0.54,1.19 -1.19,1.19h-14.25c-0.66,0 -1.19,-0.54 -1.19,-1.19v-14.25c0,-0.66 0.53,-1.19 1.19,-1.19zM15.44,15.44v-14.25h-14.25v14.25z"></path></svg>
+                            预审核
+                        </button>
+                        <button class="nav-button" onclick="changePage(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 20 19.5" fill="none" style="position: relative; top: 2px;"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M13.0612,7.71375c0.33,0 0.6001,0.27 0.6001,0.6c0,0.33 -0.2701,0.59 -0.6001,0.59h-7.11995c-0.33,0 -0.6,-0.26 -0.6,-0.59c0,-0.33 0.27,-0.6 0.6,-0.6zM13.0612,11.2837c0.33,0 0.6001,0.26 0.6001,0.59c0,0.33 -0.2701,0.59 -0.6001,0.59h-7.11995c-0.33,0 -0.6,-0.26 -0.6,-0.59c0,-0.33 0.27,-0.59 0.6,-0.59zM15.4412,0.59375c0.98,0 1.78,0.8 1.78,1.78v14.25005c0,0.98 -0.8,1.7799 -1.78,1.7799h-11.87995c-0.98,0 -1.78,-0.7999 -1.78,-1.7799v-14.25005c0,-0.98 0.8,-1.78 1.78,-1.78zM5.94125,3.56375h7.11995v-1.78h-7.11995zM16.0312,2.37375c0,-0.33 -0.27,-0.59 -0.59,-0.59h-1.1899v1.78c0,0.65 -0.5301,1.19 -1.1901,1.19h-7.11995c-0.66,0 -1.19,-0.54 -1.19,-1.19v-1.78h-1.19c-0.33,0 -0.59,0.26 -0.59,0.59v14.25005c0,0.33 0.26,0.5999 0.59,0.5999h11.87995c0.32,0 0.59,-0.2699 0.59,-0.5999z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
+                            工单
+                        </button>
+                        <button class="nav-button" onclick="changePage(4)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19" fill="none" style="position: relative; top: 3.2px;"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M9.40076,2.36224c1.71004,0 3.13004,1.42 3.13004,3.13c0,1.71 -1.42,3.14 -3.13004,3.14c-1.71,0 -3.13,-1.43 -3.13,-3.14c0,-1.71 1.42,-3.13 3.13,-3.13zM15.0008,15.5122c-3.51,1.38 -7.17004,1.47 -11.11004,0c-0.05,-3.23 1.52,-5.22 3.51,-5.97996l2.05,3.36996l2.13004,-3.27996c1.9,0.80996 3.42,2.75996 3.42,5.88996z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
+                            成员
+                        </button>
+                    </div>
+                    <button id="account-btn" onclick="changeAccountPageVisibility()">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 19 19" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M15.4338,7.525c0.33,0 0.5999,0.26 0.5999,0.59c0,0.33 -0.2699,0.59 -0.5999,0.59h-4.1501c-0.33,0 -0.5999,-0.26 -0.5999,-0.59c0,-0.33 0.2699,-0.59 0.5999,-0.59zM15.4338,10.485c0.33,0 0.5999,0.27 0.5999,0.6c0,0.33 -0.2699,0.59 -0.5999,0.59h-4.1501c-0.33,0 -0.5999,-0.26 -0.5999,-0.59c0,-0.33 0.2699,-0.6 0.5999,-0.6zM7.50375,11.785c1.49,0.16 2.59005,0.69 2.59005,1.31c0,0.75 -7.12005,0.75 -7.12005,0c0,-0.62 1.09,-1.15 2.59,-1.31v-0.38c-0.54,-0.34 -1.07,-0.92 -1.39,-1.64c-0.23,-0.11 -0.39,-0.4 -0.52,-0.9c-0.1,-0.36 0.02,-0.61 0.21,-0.76c0.08,-1.75 1.12,-2.76 2.67,-2.76c1.52,0 2.52,0.98 2.62,2.68c0.21,0.14 0.36,0.37 0.26,0.74c-0.12,0.46 -0.27,0.72 -0.49,0.82c-0.3,0.8 -0.85,1.45 -1.42,1.82zM16.6238,2.375c0.98,0 1.7799,0.8 1.7799,1.78v10.69c0,0.98 -0.7999,1.78 -1.7799,1.78h-14.25005c-0.98,0 -1.78,-0.8 -1.78,-1.78v-10.69c0,-0.98 0.8,-1.78 1.78,-1.78zM17.2237,4.155c0,-0.33 -0.2699,-0.59 -0.5999,-0.59h-14.25005c-0.33,0 -0.59,0.26 -0.59,0.59v10.69c0,0.33 0.26,0.59 0.59,0.59h14.25005c0.33,0 0.5999,-0.26 0.5999,-0.59z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
                     </button>
                 </div>
-                <button id="account-btn" onclick="changeAccountPageVisibility()">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 19 19" fill="none"><g opacity="1"  transform="translate(0 0)  rotate(0)"><mask id="bg-mask-0" fill="white"><use transform="translate(0 0)  rotate(0)" xlink:href="#path_0"></use></mask><g mask="url(#bg-mask-0)" ><path fill-rule="evenodd" class="svg-path" opacity="1" d="M15.4338,7.525c0.33,0 0.5999,0.26 0.5999,0.59c0,0.33 -0.2699,0.59 -0.5999,0.59h-4.1501c-0.33,0 -0.5999,-0.26 -0.5999,-0.59c0,-0.33 0.2699,-0.59 0.5999,-0.59zM15.4338,10.485c0.33,0 0.5999,0.27 0.5999,0.6c0,0.33 -0.2699,0.59 -0.5999,0.59h-4.1501c-0.33,0 -0.5999,-0.26 -0.5999,-0.59c0,-0.33 0.2699,-0.6 0.5999,-0.6zM7.50375,11.785c1.49,0.16 2.59005,0.69 2.59005,1.31c0,0.75 -7.12005,0.75 -7.12005,0c0,-0.62 1.09,-1.15 2.59,-1.31v-0.38c-0.54,-0.34 -1.07,-0.92 -1.39,-1.64c-0.23,-0.11 -0.39,-0.4 -0.52,-0.9c-0.1,-0.36 0.02,-0.61 0.21,-0.76c0.08,-1.75 1.12,-2.76 2.67,-2.76c1.52,0 2.52,0.98 2.62,2.68c0.21,0.14 0.36,0.37 0.26,0.74c-0.12,0.46 -0.27,0.72 -0.49,0.82c-0.3,0.8 -0.85,1.45 -1.42,1.82zM16.6238,2.375c0.98,0 1.7799,0.8 1.7799,1.78v10.69c0,0.98 -0.7999,1.78 -1.7799,1.78h-14.25005c-0.98,0 -1.78,-0.8 -1.78,-1.78v-10.69c0,-0.98 0.8,-1.78 1.78,-1.78zM17.2237,4.155c0,-0.33 -0.2699,-0.59 -0.5999,-0.59h-14.25005c-0.33,0 -0.59,0.26 -0.59,0.59v10.69c0,0.33 0.26,0.59 0.59,0.59h14.25005c0.33,0 0.5999,-0.26 0.5999,-0.59z"></path></g></g><defs><rect id="path_0" x="0" y="0" width="19" height="19" /></defs></svg>
-                </button>
-            </div>
-            <div id="page-container">
-                <div class="page page-this">
-                    <h1 id="title"></h1>
-                    <h2 id="you-can-do">
-                        <span id="line0">现在我能干什么？</span>
-                        <hr>
-                        <span id="line1">1</span>
-                        <span id="line2">2</span>
-                    </h2>
-                </div>
-                <div class="page">
-                    <h1 id="title">请先登录</h1>
-                    <h2 id="subtitle"></h2>
-                    <!-- you-can-do for lv2/lv3 -->
-                    <h2 id="you-can-do">
-                        <span id="line0">现在我能干什么？</span>
-                        <hr>
-                        <span id="line1">1</span>
-                        <span id="line2">2</span>
-                    </h2>
-                    <div id="chooses-container">
-                        <div class="card" type="r">
-                            <img src="/assets/img/redstone.png" alt="红石">
-                        </div>
-                        <div class="card" type="b">
-                            <img src="/assets/img/wooden_axe.png" alt="建筑">
-                        </div>
-                        <div class="card" type="s">
-                            <img src="/assets/img/diamond_sword.png" alt="战斗">
+                <div id="page-container">
+                    <div class="page page-this">
+                        <h1 id="title"></h1>
+                        <h2 id="you-can-do">
+                            <span id="line0">现在我能干什么？</span>
+                            <hr>
+                            <span id="line1">1</span>
+                            <span id="line2">2</span>
+                        </h2>
+                    </div>
+                    <div class="page">
+                        <h1 id="title">请先登录</h1>
+                        <h2 id="subtitle"></h2>
+                        <!-- you-can-do for lv2/lv3 -->
+                        <h2 id="you-can-do">
+                            <span id="line0">现在我能干什么？</span>
+                            <hr>
+                            <span id="line1">1</span>
+                            <span id="line2">2</span>
+                        </h2>
+                        <div id="chooses-container">
+                            <div class="card" type="r">
+                                <img src="assets/img/redstone.png" alt="红石">
+                                <div class="content">
+                                    <h1>红石</h1>
+                                    <span>
+                                        红石在 Minecraft 中起到了工业化制造的重要作用，通过红石机器，你可以轻松的量产可再生物品。
+                                        如果你掌握了基本红石元器件的用法，欢迎你通过此类预审核来加入我们
+                                    </span>
+                                    <button>开始填写 红石 预审核表单</button>
+                                </div>
+                            </div>
+                            <div class="card" type="b">
+                                <img src="assets/img/wooden_axe.png" alt="建筑">
+                                <div class="content">
+                                    <h1>建筑</h1>
+                                    <span>
+                                        虽然 Minecraft 是像素游戏，但是只要使用一些特定的技巧与方法，就能建造出像素风的真实建筑。
+                                        如果你对这方面很感兴趣，并且会基本的建筑技巧，欢迎你通过此类预审核来加入我们
+                                    </span>
+                                    <button>开始填写 建筑 预审核表单</button>
+                                </div>
+                            </div>
+                            <div class="card" type="s">
+                                <img src="assets/img/diamond_sword.png" alt="战斗">
+                                <div class="content">
+                                    <h1>战斗</h1>
+                                    <span>
+                                        战斗，在 Minecraft 中并不血腥你只需要了解并熟记各种敌对生物的习性，就能轻松打败它们。
+                                        如果你对敌对生物的习性有所了解，欢迎你通过此类预审核来加入我们
+                                    </span>
+                                    <button>开始填写 战斗 预审核表单</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="page">
+                    </div>
+                    <div class="page">
+                    </div>
                 </div>
-                <div class="page">
+            </div>
+            <div id="account-page">
+                <h1>账号</h1>
+                <div id="is-login">
+                    <div id="container">
+                        <div id="user-info">
+                            <img src="assets/img/LingyunAwA.jpg" alt="用户头像" id="user-avator">
+                            <span id="user-name">LingyunAwA</span>
+                        </div>
+                        <span id="user-perm-container">用户等级：<span id="user-perm">I 待审核</span></span>
+                        <button id="logout" onclick="tryLogout()">注销</button>
+                    </div>
                 </div>
-                <div class="page">
+                <div id="not-login">
+                    <div id="container">
+                        <span id="hint">请先登录 / 注册</span>
+                        <input placeholder="用户名" type="text" id="input-username" style="margin-top: 12%;">
+                        <input placeholder="密码" type="password" id="input-password">
+                        <button id="login" onclick="tryLogin()" style="margin-top: 4vh;">登录</button>
+                        <button id="register" onclick="tryRegister()">注册</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="account-page">
-            <h1>账号</h1>
-            <div id="is-login">
-                <div id="container">
-                    <div id="user-info">
-                        <img src="/assets/img/LingyunAwA.jpg" alt="用户头像" id="user-avator">
-                        <span id="user-name">LingyunAwA</span>
-                    </div>
-                    <span id="user-perm-container">用户等级：<span id="user-perm">I 待审核</span></span>
-                    <button id="logout" onclick="tryLogout()">注销</button>
-                </div>
-            </div>
-            <div id="not-login">
-                <div id="container">
-                    <span id="hint">请先登录 / 注册</span>
-                    <input placeholder="用户名" type="text" id="input-username" style="margin-top: 12%;">
-                    <input placeholder="密码" type="password" id="input-password">
-                    <button id="login" onclick="tryLogin()" style="margin-top: 4vh;">登录</button>
-                    <button id="register" onclick="tryRegister()">注册</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="/GmAlert/gmalert.min.js"></script>
-<script src="/assets/js/public.js"></script>
-<script src="/assets/js/account.js"></script>
-<script src="/assets/js/page.js"></script>
+    </body>
+    <script src="gmAlert/gmalert.min.js"></script>
+    <script src="assets/js/public.js"></script>
+    <script src="assets/jsaccount.js"></script>
+    <script src="assets/js/page.js"></script>
 </html>
